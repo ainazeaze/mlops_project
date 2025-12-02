@@ -29,6 +29,7 @@ class ModelManager:
             stage=status,
         )
 
-
+    def retrain(self, training_set, training_set_id, register_updated_model):
+        pass
 
     
