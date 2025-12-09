@@ -6,7 +6,7 @@ setup(
     packages=find_packages(where='src'),
     package_dir={"":"src"},    
     install_requires=[
-        "numpy", "pandas", "matplotlib", "scikit-learn", "mlflow", "click", "fastapi",  "uvicorn"
+        "numpy", "pandas", "matplotlib", "scikit-learn", "mlflow", "click", "fastapi",  "uvicorn", "loguru"
     ],
     entry_points={
         'console_scripts': [

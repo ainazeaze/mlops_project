@@ -1,0 +1,27 @@
+services:
+  front:
+    build : ./src/frontend
+    environment:
+      - WEBAPP_URL=webapp:8000
+    ports:
+      - 8501:8501
+  
+  webapp:
+    image: sentiment-analyzer:v1
+    environment:
+      - SENTIMENT_ANALYZER_MODEL_PATH=.
+
+    ports:
+      - 8001:8000
+
+  mongodb:
+      image: mongo:latest
+      container_name: mongodb_container
+      restart: always
+      environment:
+        MONGO_INITDB_ROOT_USERNAME: admin
+        MONGO_INITDB_ROOT_PASSWORD: secretpassword
+      volumes:
+        - mongo-data:/data/db
+volumes:
+  mongo-data:
