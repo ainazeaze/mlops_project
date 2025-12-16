@@ -134,5 +134,5 @@ fastapi==0.123.4
 uvicorn==0.38.0
 loguru==0.7.3
 pymongo==4.15.5
-
+openai==2.12.0
 
